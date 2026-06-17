@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import { tmpdir } from 'node:os'
 import { readLockfile, writeLockfile, LOCKFILE_NAME } from '../src/lockfile.js'
@@ -44,7 +44,7 @@ test('writeLockfile produces valid JSON', () => {
   const dir = join(tmp, 'json-test')
   mkdirSync(dir, { recursive: true })
   writeLockfile(dir, { version: 1, entries: {} })
-  const raw = (await import('node:fs')).readFileSync(join(dir, LOCKFILE_NAME), 'utf8')
+  const raw = readFileSync(join(dir, LOCKFILE_NAME), 'utf8')
   assert.doesNotThrow(() => JSON.parse(raw))
 })
 
