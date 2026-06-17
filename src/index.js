@@ -5,6 +5,8 @@ import { readLockfile, writeLockfile, LOCKFILE_NAME } from './lockfile.js'
 import { diffLocks, formatDiff } from './check.js'
 
 export { hashContent, hashFile } from './hash.js'
+export { loadConfig, DEFAULT_CONFIG } from './config.js'
+export { formatJson, formatList } from './format.js'
 export { findPromptFiles } from './scanner.js'
 export { readLockfile, writeLockfile, LOCKFILE_NAME } from './lockfile.js'
 export { diffLocks, formatDiff } from './check.js'
