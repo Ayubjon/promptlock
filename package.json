@@ -1,0 +1,30 @@
+{
+  "name": "promptlock",
+  "version": "1.0.0",
+  "description": "Lock your LLM prompt files against accidental changes — like package-lock.json for prompts",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "promptlock": "bin/promptlock.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "llm",
+    "prompt",
+    "lockfile",
+    "ci",
+    "integrity",
+    "ai",
+    "prompt-engineering"
+  ],
+  "author": "Ayubjon",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
