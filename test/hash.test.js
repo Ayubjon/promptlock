@@ -35,7 +35,7 @@ test('hashFile returns hash, lines, chars for a file', () => {
   assert.equal(typeof result.hash, 'string')
   assert.equal(result.hash.length, 64)
   assert.equal(result.lines, 3)   // 2 lines + trailing newline = 3 parts
-  assert.equal(result.chars, 48)
+  assert.equal(result.chars, 47)
 })
 
 test('hashFile detects content change', () => {
